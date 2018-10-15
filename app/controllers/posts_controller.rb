@@ -3,8 +3,10 @@ class PostsController < ApplicationController
 
   # GET /posts
   # GET /posts.json
+  #Post model class
   def index
     @posts = Post.all
+    render template: "posts/index.html.erb", layout: "application"
   end
 
   # GET /posts/1
